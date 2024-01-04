@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tareas</title>
+    <link href="{% static 'styles.css' %}" rel="stylesheet"/>
+  </head>
+  <body>
+    <a href="{% url 'tasks' %}"><button type="button">Atras</button></a>
+    <h1>{{ name }}</h1>
+    <button type="button" id="button_temp"  onclick="temporizador()">Comenzar</button>
+    <p id="time"></p>
+
+    <audio id="endTemp">
+        <source src="{% static 'endTemp.mp3' %}">
+    </audio>
+
+    <!--Script-->
+    <script src="{% static 'temporizador.js' %}"></script>
+  </body>
+</html>

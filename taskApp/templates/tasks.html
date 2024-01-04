@@ -1,0 +1,27 @@
+{% extends 'newTask.html' %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tareas</title>
+  </head>
+  <body>
+    {% block content %}
+    <h1>Tareas HTML</h1>
+    <ul class="tasks">
+      {% for task in tasks %} {% if task.active %}
+      <div class="task-card">
+        <li>{{task.name}} - {{ task.id }}</li>
+        <form action="{% url 'deleteTask' task.id %}" method="POST">
+          {% csrf_token %}
+          <a href="{% url 'task_detail' task.id %}"
+            ><button type="button">Ver detalles</button></a
+          >
+          <button type="submit">Borrar</button>
+        </form>
+      </div>
+      {% endif %} {% endfor %}
+    </ul>
+    {% endblock %}
+  </body>
+</html>

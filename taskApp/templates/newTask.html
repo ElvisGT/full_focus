@@ -1,0 +1,17 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>Task</title>
+        <link href="{% static 'styles.css' %}" rel="stylesheet"/>
+    </head>
+
+</html>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ formTask }}
+    <button type="submit">Agregar</button>
+</form>
+{% block content %}
+{% endblock %}
