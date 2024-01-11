@@ -23,7 +23,7 @@ _Si deseas contribuir al desarrollo de Full_Focus, sigue estos pasos:_
 
 1. **Clona el Repositorio:**
    ```
-   git clone https://github.com/tuusuario/Full_Focus.git
+   git clone https://github.com/ElvisGT/Full_Focus.git
 
    ```
 
